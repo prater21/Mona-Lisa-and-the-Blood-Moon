@@ -4,56 +4,41 @@ const form = document.querySelector("form");
 const textarea = document.querySelector("textarea");
 
 const getStars = (num, parent) => {
+    const stars = document.createElement("div");
+    stars.style.color = "yellow";
+    stars.style.fontSize = "23px";
     switch (num) {
         case "5":
-            const stars5 = document.createElement("div");
-            stars5.innerText = "★★★★★";
-            stars5.style.color = "yellow";
-            stars5.style.fontSize = "23px";
-            parent.appendChild(stars5);
+            stars.innerText = "★★★★★";
+            parent.appendChild(stars);
             break;
         case "4":
-            const stars4 = document.createElement("div");
-            stars4.innerText = "★★★★";
-            stars4.style.color = "yellow"
-            stars4.style.fontSize = "23px"
-            parent.appendChild(stars4);
+            stars.innerText = "★★★★";
+            parent.appendChild(stars);
             break;
         case "3":
-            const stars3 = document.createElement("div");
-            stars3.innerText = "★★★";
-            stars3.style.color = "yellow"
-            stars3.style.fontSize = "23px"
-            parent.appendChild(stars3);
+            stars.innerText = "★★★";
+            parent.appendChild(stars);
             break;
         case "2":
-            const stars2 = document.createElement("div");
-            stars2.innerText = "★★";
-            stars2.style.color = "yellow"
-            stars2.style.fontSize = "23px"
-            parent.appendChild(stars2);
+            stars.innerText = "★★";
+            parent.appendChild(stars);
             break;
         case "1":
-            const stars1 = document.createElement("div");
-            stars1.innerText = "★";
-            stars1.style.color = "yellow"
-            stars1.style.fontSize = "23px"
-            parent.appendChild(stars1);
+            stars.innerText = "★";
+            parent.appendChild(stars);
             break;
         default:
             console.log("wrong number");
             break;
-
     }
-
 }
 
-//get reviews
+//get reviews from firebase
 fetch("https://mona-lisa-and-the-blood-4a6d2-default-rtdb.firebaseio.com/reviews.json")
     .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-        const reviews = data
+    .then((reviews) => {
+        // console.log(data);
         Object.keys(reviews).forEach(id => {
             const newReview = document.createElement("li");
             newReview.classList.add('body__review');
@@ -66,7 +51,7 @@ fetch("https://mona-lisa-and-the-blood-4a6d2-default-rtdb.firebaseio.com/reviews
         })
     });
 
-//add review
+//add review to firebase
 form.addEventListener("submit", (e => {
     e.preventDefault();
     const stars = document.querySelector("input[name='review[rating]']:checked").value;
@@ -82,7 +67,7 @@ form.addEventListener("submit", (e => {
             stars
         }),
     }).then((response) => {
-        console.log(response);
+        // console.log(response);
         textarea.value = "";
         location.reload();
     });
