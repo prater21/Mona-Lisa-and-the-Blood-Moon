@@ -3,6 +3,7 @@ const ul = document.querySelector(".body__reviews");
 const form = document.querySelector("form");
 const textarea = document.querySelector("textarea");
 
+// display stars
 const getStars = (num, parent) => {
     const stars = document.createElement("div");
     stars.style.color = "yellow";
@@ -39,6 +40,7 @@ fetch("https://mona-lisa-and-the-blood-4a6d2-default-rtdb.firebaseio.com/reviews
     .then((response) => response.json())
     .then((reviews) => {
         // console.log(data);
+        //display reviews
         Object.keys(reviews).forEach(id => {
             const newReview = document.createElement("li");
             newReview.classList.add('body__review');
@@ -69,6 +71,7 @@ form.addEventListener("submit", (e => {
     }).then((response) => {
         // console.log(response);
         textarea.value = "";
+        //page reload
         location.reload();
     });
 
