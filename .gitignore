@@ -6,3 +6,5 @@
 
 #API KEY
 .env
+
+firebase.js
