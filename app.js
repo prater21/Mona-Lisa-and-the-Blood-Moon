@@ -1,9 +1,9 @@
 const express = require("express");
 const methodOverride = require('method-override');
-const { ref, get, set, child, remove } = require("firebase/database");
-const {v4 : uuidv4} = require("uuid")
-const {database} = require("./firebase");
 const path = require("path");
+const { ref, get, set, child, remove } = require("firebase/database");
+const { database } = require("./firebase");
+const { v4: uuidv4 } = require("uuid")
 require("dotenv").config();
 
 const app = express();
@@ -14,10 +14,11 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, "public")));
+
+//google oAuth
 const authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
 const getTokenEndpoint = "https://oauth2.googleapis.com/token";
-// const redirectUri = "http://localhost:3000/MonaLisaAndTheBloodMoon/main";
-const redirectUri = "https://mona-lisa-and-the-blood-moon.onrender.com/MonaLisaAndTheBloodMoon/main"
+const redirectUri = "http://localhost:3000/MonaLisaAndTheBloodMoon/main";
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;
 const scopes =
@@ -26,6 +27,7 @@ const oAuthURL = `${authEndpoint}?client_id=${clientId}&response_type=code&redir
 
 let userInfo = null;
 let reviews = null;
+
 const getReviews = (req, res, next) => {
     const dbRef = ref(database);
     get(child(dbRef, "/reviews"))
@@ -34,7 +36,7 @@ const getReviews = (req, res, next) => {
                 reviews = snapshot.val();
             } else {
                 reviews = null;
-                console.log("No data available");
+                // console.log("No data available");
             }
         })
         .then(() => { next(); })
@@ -46,13 +48,13 @@ const getReviews = (req, res, next) => {
 
 app.get("/", (req, res) => {
     res.redirect("/MonaLisaAndTheBloodMoon");
-
 });
 
 app.get("/MonaLisaAndTheBloodMoon", (req, res) => {
     res.render("index");
 });
 
+//add review
 app.post("/MonaLisaAndTheBloodMoon", (req, res) => {
     const uuid = uuidv4();
     const date = new Date().toLocaleString();
@@ -70,7 +72,6 @@ app.post("/MonaLisaAndTheBloodMoon", (req, res) => {
 
 app.get("/MonaLisaAndTheBloodMoon/main", getReviews, async (req, res) => {
     const { code } = req.query;
-
     if (code) {
         fetch(getTokenEndpoint, {
             method: "POST",
@@ -99,11 +100,14 @@ app.get("/MonaLisaAndTheBloodMoon/main", getReviews, async (req, res) => {
         res.render("main", { userInfo, reviews });
     }
 });
+
+//delete review
 app.delete("/MonaLisaAndTheBloodMoon/:reviewId", async (req, res) => {
     const { reviewId } = req.params;
     remove(ref(database, `/reviews/${reviewId}`))
     res.redirect("/MonaLisaAndTheBloodMoon/main");
 })
+
 app.get("/auth/google", (req, res) => {
     res.redirect(oAuthURL);
 });
