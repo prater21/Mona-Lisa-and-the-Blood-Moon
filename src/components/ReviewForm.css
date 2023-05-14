@@ -1,0 +1,78 @@
+
+.body__rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  font-size: 25px;
+  padding: 2px;
+  text-align: center;
+  width: 130px;
+}
+
+.body__rating input {
+  margin-left: -22px;
+  width: 7px;
+  margin-top: -1px;
+  z-index: -1;
+}
+
+.body__rating label {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.body__rating :checked~label {
+  color: #fc0;
+}
+
+.body__rating label:hover,
+.body__rating label:hover~label {
+  color: #fc0;
+}
+
+.body__rating>p {
+  margin: 0;
+  color: #c0c0c0;
+}
+
+textarea {
+  margin-top: 5px;
+  resize: none;
+  margin-left: 5px;
+}
+
+.body__username {
+  margin-top: 5px;
+  margin-left: 8px;
+}
+
+.body__btn {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 75px;
+  font-size: 15px;
+  background-color: rgb(126, 75, 158);
+  border-radius: 7px;
+  border: 1px solid rgb(126, 75, 158);
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.body__btn:hover {
+  background-color: rgb(215, 159, 255);
+  color: rgb(126, 75, 158);
+  border: 1px solid rgb(215, 159, 255);
+}
+
+.disabled {
+  background-color: #636770;
+  border: 1px solid #636770;
+}
+
+.disabled:hover {
+  background-color: #636770;
+  border: 1px solid #636770;
+  color: white;
+  cursor: default;
+}

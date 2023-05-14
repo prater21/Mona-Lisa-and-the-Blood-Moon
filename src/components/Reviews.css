@@ -1,0 +1,56 @@
+.body__reviews {
+  list-style: none;
+  padding: 0;
+  width: 900px;
+  margin-left: 5px;
+  /* margin-top: 50px; */
+}
+
+.body__review {
+  border: 1px solid rgb(73, 52, 80);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 15px 0 10px 20px;
+}
+
+.body__reviewDelete {
+  width: 30px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.body__reviewDelete button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: rgb(184, 184, 184);
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.body__reviewStars {
+  margin: 0px;
+  margin-left: -2px;
+  color: yellow;
+  font-size: 1.2rem;
+}
+
+.body__reviewBody {
+  margin: 10px 0;
+}
+
+.body__reviewUser {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.body__reviewUser>p {
+  margin-top: 0;
+}
+
+.body__reviewDate {
+  color: #b8b8b8;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
