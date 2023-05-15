@@ -10,7 +10,7 @@ const router = createBrowserRouter(
       <Route index element={<Index />} />
       <Route path='main' element={<Main />} loader={loader}/>
     </Route>
-  ), { basename: "/MonaLisaandtheBloodMoon" }
+  )
 )
 
 function App() {
