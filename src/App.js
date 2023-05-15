@@ -6,11 +6,11 @@ import Index from './components/pages/Index';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/MonaLisaandtheBloodMoon'>
-      <Route path='' element={<Index />} />
+    <Route path='/'>
+      <Route index element={<Index />} />
       <Route path='main' element={<Main />} loader={loader}/>
     </Route>
-  )
+  ), { basename: "/MonaLisaandtheBloodMoon" }
 )
 
 function App() {

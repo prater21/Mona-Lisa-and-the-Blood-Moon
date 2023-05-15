@@ -6,13 +6,13 @@ import "./ReviewForm.css"
 
 const ReviewForm = ({ login, userInfo, setReviews }) => {
     const [rating, setRating] = useState(0);
-    const review = useRef("");
+    const review = useRef();
+
     const addReview = async (e) => {
         e.preventDefault();
-        console.log("clici")
         const body = review.current.value;
         const reviewId = uuid();
-        const date = new Date().toLocaleString();
+        const date = new Date().toLocaleString('en-GB');
         await set(ref(database, "reviews/" + reviewId), {
             stars: rating,
             review: body,
@@ -27,7 +27,6 @@ const ReviewForm = ({ login, userInfo, setReviews }) => {
     }
 
     const getRating = (e) => {
-        e.preventDefault();
         setRating(e.target.value);
     }
 
@@ -47,7 +46,6 @@ const ReviewForm = ({ login, userInfo, setReviews }) => {
                     <input type="radio" id="1-star" name="review[rating]" value="1" onChange={getRating} />
                     <label htmlFor="1-star" className="star">&#9733;</label>
                 </div>
-
                 <textarea name="review[body]" cols="112" rows="7" required ref={review}></textarea>
                 <button className="body__btn">Add</button>
                 <p className="body__username">by {userInfo.name}</p>

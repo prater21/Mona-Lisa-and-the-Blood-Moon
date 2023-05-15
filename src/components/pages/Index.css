@@ -1,68 +1,109 @@
-.index{
-    background-color: black;
-    width: 900px;
-    height: 100vh;
+.index {
+  background-color: black;
+  width: 900px;
+  height: 100vh;
 }
 
-.title{
-    font-family: 'Secular One', sans-serif;
-    position: fixed;
-    width: 900px;
-    top: 250px;
-    color: yellow;
-    text-shadow: 4px 4px 5px rgba(255, 242, 1, 1);
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    z-index: 1;
-}
-
-.title p{
-    margin-top: 0;
-    margin-bottom: 0 ;
-    margin-left: auto;
-}
-.title-1{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-right: 50px;
-} 
-.title-2{
-    font-size: 1.3rem;
-    margin-right: 90px;
-}
- .title-3{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-right: 30px;
- }
-.img-moon{
-    position: fixed;
-    top: -1px;
-    z-index: 1;
-    width: 500px;
-    margin-left: 200px;
+.title {
+  font-family: "Secular One", sans-serif;
+  position: fixed;
+  width: 900px;
+  top: 250px;
+  color: yellow;
+  text-shadow: 4px 4px 5px rgba(255, 242, 1, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 1;
+  transition: all 0.4s linear;
 
 }
-.img-moon:hover{
-    scale: 1.05;
-    filter: drop-shadow( 7px 34px 36px rgba(153,29,126,0.67)); 
+
+.title p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+.title-1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 50px;
+}
+.title-2 {
+  font-size: 1.3rem;
+  margin-right: 90px;
+}
+.title-3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 30px;
+}
+.red{
+    color: rgb(151, 29, 158);
+  text-shadow: 4px 4px 5px rgb(199, 102, 204);
+
+  transition: all 0.3s linear;
+
+}
+.img-moon {
+  position: fixed;
+  top: -1px;
+  z-index: 1;
+  width: 500px;
+  margin-left: 200px;
+  transition: all 0.3s linear;
 }
 
-.img-background{
-    position: fixed;
-    bottom: -50px;
-    width: 900px;
-    /* height: 100vh; */
+.img-moon:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(7px 24px 30px rgba(153, 29, 126, 0.67));
 }
 
-.click-btn{
-    font-family: 'Secular One', sans-serif;
-    z-index: 10;
-    font-size: 1.5rem;
-    color: white;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255);
-    position: relative;
-    top : 150px;
-    left : 200px;
+.img-background {
+  position: fixed;
+  bottom: -50px;
+  width: 900px;
+  /* height: 100vh; */
+}
+
+.click-btn {
+  font-family: "Secular One", sans-serif;
+  z-index: 10;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  position: relative;
+  top: 130px;
+  left: 200px;
+}
+.img-diner{
+  position: fixed;
+  width: 900px;
+  bottom: 35px;
+}
+
+.img-diner img{
+  height: 510px;
+  transition: all 0.2s linear;
+  transform-origin: bottom left ;
+}
+
+.img-mona {
+  display: flex;
+  width: 900px;
+  position: fixed;
+  bottom: 40px;
+}
+
+.img-mona img {
+  height: 190px;
+  margin-left: auto;
+  margin-right: 70px;
+  transition: all 0.5s linear;
+  transform-origin: bottom left ;
+
+}
+.img-mona img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }

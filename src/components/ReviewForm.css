@@ -1,4 +1,3 @@
-
 .body__rating {
   display: flex;
   flex-direction: row-reverse;
@@ -10,9 +9,8 @@
 }
 
 .body__rating input {
-  margin-left: -22px;
-  width: 7px;
-  margin-top: -1px;
+  position:absolute;
+  margin-top: 40px;
   z-index: -1;
 }
 

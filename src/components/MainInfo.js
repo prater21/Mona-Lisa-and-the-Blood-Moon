@@ -5,7 +5,6 @@ const MainInfo = () => {
         <div className="top">
             <h1>모나리자와 블러드 문</h1>
             <div className="top__description">
-
                 <div className="top__left">
                     <p>Mona lisa and the blood Moon</p>
                     <p className="top__year">2023 R 1h 46m</p>
@@ -13,23 +12,19 @@ const MainInfo = () => {
                 <div className="top__right">
                     <img className="top__imdbIcon" src={process.env.PUBLIC_URL + "/imgs/imdbIcon.png"} alt=""
                         onClick={() => { "location.href='https://www.imdb.com/title/tt8760670/?ref_=nv_sr_srsg_0'" }} />
-
                     <img className="top__daumIcon" src={process.env.PUBLIC_URL + "/imgs/daumIcon.png"} alt=""
                         onClick={() => { "location.href='https://movie.daum.net/moviedb/main?movieId=133138'" }} />
                 </div>
             </div>
         </div>
         <div>
-
             <img className="body__poster" src={process.env.PUBLIC_URL + "/imgs/mona-poster1.jpeg"} alt="" />
             <img className="body__poster" src={process.env.PUBLIC_URL + "/imgs/mona-poster2.jpeg"} alt="" />
-{/* 
             <iframe width="560" height="308" src="https://www.youtube.com/embed/NOb0spi2u1Y"
                 title="MONA LISA AND THE BLOOD MOON | Official Trailer | Paramount Movies" frameborder="0"
-                allowfullscreen></iframe> */}
+                allowfullscreen></iframe>
         </div>
         <div className="body__description">
-
             <article className="body__movieLogline">
                 붉은 달이 뜨던 밤, 폐쇄병동에서 탈출한
                 '모나'는 화려한 조명에 이끌려 도착한 낯선 도시에서
@@ -41,7 +36,6 @@ const MainInfo = () => {
                 완벽한 밤… 완전한 자유? 완성된 운명!
                 새로운 세상으로 향하는 '모나'의 모험이 펼쳐진다.
             </article>
-
             <div className="body__director">
                 <p><span>director</span> : Ana Lily Amirpour</p>
                 <p><span>writer</span> : Ana Lily Amirpour</p>
@@ -76,7 +70,6 @@ const MainInfo = () => {
                 </div>
             </div>
         </div>
-
         <div className="body__content">
             <h2 className="body__title">수상내역</h2>
             <p><span>2022</span> 제라르메국제판타스틱영화제 음악상(애나 릴리 아미푸르)</p>

@@ -3,7 +3,6 @@
   padding: 0;
   width: 900px;
   margin-left: 5px;
-  /* margin-top: 50px; */
 }
 
 .body__review {
@@ -25,7 +24,6 @@
   color: rgb(184, 184, 184);
   font-size: 1rem;
   cursor: pointer;
-
 }
 
 .body__reviewStars {
