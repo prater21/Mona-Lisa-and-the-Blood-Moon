@@ -36,7 +36,7 @@ const getStars = (num, parent) => {
 }
 
 //get reviews from firebase
-fetch("https://mona-lisa-and-the-blood-4a6d2-default-rtdb.firebaseio.com/reviews.json")
+fetch("https://mona-lisa-and-the-blood-4a6d2-default-rtdb.firebaseio.com/version1.json")
     .then((response) => response.json())
     .then((reviews) => {
         // console.log(data);
@@ -59,7 +59,7 @@ form.addEventListener("submit", (e => {
     const stars = document.querySelector("input[name='review[rating]']:checked").value;
     const review = textarea.value;
 
-    fetch("https://mona-lisa-and-the-blood-4a6d2-default-rtdb.firebaseio.com/reviews.json", {
+    fetch("https://mona-lisa-and-the-blood-4a6d2-default-rtdb.firebaseio.com/version1.json", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
