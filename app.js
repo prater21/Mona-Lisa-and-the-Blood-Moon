@@ -18,7 +18,8 @@ app.use(express.static(path.join(__dirname, "public")));
 //google oAuth
 const authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
 const getTokenEndpoint = "https://oauth2.googleapis.com/token";
-const redirectUri = "http://localhost:3000/MonaLisaAndTheBloodMoon/main";
+// const redirectUri = "http://localhost:3000/MonaLisaAndTheBloodMoon/main";
+const redirectUri = "https://mona-lisa-and-the-blood-moon.onrender.com/MonaLisaAndTheBloodMoon/main";
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;
 const scopes =
