@@ -1,3 +1,6 @@
+/**
+ * main page information component
+ */
 import "./MainInfo.css"
 
 const MainInfo = () => {

@@ -2,8 +2,6 @@ import { createBrowserRouter,createRoutesFromElements, Route, RouterProvider } f
 import Main, { loader } from './components/pages/Main';
 import Index from './components/pages/Index';
 
-
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/'>

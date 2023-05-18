@@ -1,3 +1,6 @@
+/**
+ * index page
+ */
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import "./Index.css"
@@ -8,7 +11,7 @@ const Index = () => {
     const dinerImg = useRef();
     let cnt = 1;
 
-    const clickMona= () => {
+    const clickMona = () => {
         let scale = 1 + 0.02 * cnt;
         cnt++;
         if (cnt <= 11)
@@ -36,17 +39,16 @@ const Index = () => {
             </Link>
             <img className="img-background" src={process.env.PUBLIC_URL + "/imgs/mona1.jpeg"} alt="" />
             <div className="img-diner" >
-                <img  ref={dinerImg} src={process.env.PUBLIC_URL + "/imgs/diner.png"} alt="" />
+                <img ref={dinerImg} src={process.env.PUBLIC_URL + "/imgs/diner.png"} alt="" />
             </div>
             <div className="img-mona">
                 <img
                     onClick={clickMona}
-                    onMouseOver={() => {title.current.classList.add("red");}}
+                    onMouseOver={() => { title.current.classList.add("red"); }}
                     onMouseOut={mouseOutMona}
                     src={process.env.PUBLIC_URL + "/imgs/mona.png"} alt="" />
             </div>
             {click && <span className="click-btn">Click</span>}
-
         </div>)
 }
 

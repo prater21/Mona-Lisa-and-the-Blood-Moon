@@ -1,3 +1,6 @@
+/**
+ * login component
+ */
 import { useEffect, useState } from 'react';
 import { useSearchParams } from "react-router-dom";
 
@@ -9,6 +12,7 @@ const Login = ({ setUser }) => {
     const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
+        //get oAuth code
         const param = searchParams.get("code");
         if (param) {
             setCode(param);
@@ -21,6 +25,7 @@ const Login = ({ setUser }) => {
     }, [searchParams])
 
     useEffect(() => {
+        //get oAuth access token
         if (code) {
             fetch(getTokenEndpoint, {
                 method: "POST",
@@ -37,7 +42,7 @@ const Login = ({ setUser }) => {
                 )
                     .then((response) => response.json())
                     .then((profile) => {
-                        console.log(profile);
+                        // console.log(profile);
                         const { email, name, picture } = profile;
                         setUser(email, name, picture );
                     })

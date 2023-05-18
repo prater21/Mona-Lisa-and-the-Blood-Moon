@@ -1,3 +1,6 @@
+/**
+ * review form component
+ */
 import { useState, useRef } from 'react';
 import { ref, set, get, child } from "firebase/database";
 import database from "../config/firebase"

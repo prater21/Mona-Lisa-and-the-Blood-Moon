@@ -1,7 +1,9 @@
+/**
+ * review component
+ */
 import { ref, remove, get, child } from "firebase/database";
 import database from "../config/firebase"
 import "./Reviews.css"
-
 
 const Reviews = ({ reviews, setReviews, userInfo }) => {
 
