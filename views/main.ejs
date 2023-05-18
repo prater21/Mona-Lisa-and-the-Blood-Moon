@@ -16,7 +16,15 @@
     <div class="main">
         <div class="top">
            <!-- login -->
-            <a href="/auth/google" class="top__loginBtn"><img src="/imgs/googleBtn.png" alt="login"></a>
+           <% if(userInfo) {%>
+                <div class="top__logout">
+                    <img src=<%= userInfo.picture %> alt="" />
+                    <p>Hi, <%= userInfo.name %></p>
+                    <a href="/logout"  class="top__logoutBtn">Logout</a>
+                </div>
+            <%} else {%>
+                <a href="/auth/google" class="top__loginBtn"><img src="/imgs/googleBtn.png" alt="login"></a>
+            <% } %>
             <!-- title -->
             <h1>모나리자와 블러드 문</h1>
             <div class="top__description">

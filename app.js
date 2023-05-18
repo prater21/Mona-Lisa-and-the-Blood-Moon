@@ -88,8 +88,8 @@ app.get("/MonaLisaAndTheBloodMoon/main", getReviews, async (req, res) => {
                 )
                     .then((response) => response.json())
                     .then((profile) => {
-                        const { email, name } = profile;
-                        userInfo = { email, name };
+                        const { email, name, picture } = profile;
+                        userInfo = { email, name, picture };
                     })
                     .then(() => {
                         req.query = "#";
@@ -97,6 +97,7 @@ app.get("/MonaLisaAndTheBloodMoon/main", getReviews, async (req, res) => {
                     });
             });
     } else {
+        // console.log(userInfo)
         res.render("main", { userInfo, reviews });
     }
 });
@@ -105,11 +106,16 @@ app.get("/MonaLisaAndTheBloodMoon/main", getReviews, async (req, res) => {
 app.delete("/MonaLisaAndTheBloodMoon/:reviewId", async (req, res) => {
     const { reviewId } = req.params;
     remove(ref(database, `/reviews/${reviewId}`))
-    res.redirect("/MonaLisaAndTheBloodMoon/main");
+    res.redirect("/MonaLisaAndTheBloodMoon/main/main");
 })
 
 app.get("/auth/google", (req, res) => {
     res.redirect(oAuthURL);
+});
+
+app.get("/logout", (req, res) => {
+    userInfo = null;
+    res.redirect("/MonaLisaAndTheBloodMoon/main");
 });
 
 //위에 route랑 매치 안되는거 다 여기로
