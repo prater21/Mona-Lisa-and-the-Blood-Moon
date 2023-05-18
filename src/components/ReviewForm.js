@@ -46,7 +46,7 @@ const ReviewForm = ({ login, userInfo, setReviews }) => {
                     <input type="radio" id="1-star" name="review[rating]" value="1" onChange={getRating} />
                     <label htmlFor="1-star" className="star">&#9733;</label>
                 </div>
-                <textarea name="review[body]" cols="112" rows="7" required ref={review}></textarea>
+                <textarea name="review[body]"  required ref={review}></textarea>
                 <button className="body__btn">Add</button>
                 <p className="body__username">by {userInfo.name}</p>
             </form>}
@@ -60,7 +60,7 @@ const ReviewForm = ({ login, userInfo, setReviews }) => {
                     <p htmlFor="2-stars" className="star">&#9733;</p>
                     <p htmlFor="1-star" className="star">&#9733;</p>
                 </div>
-                <textarea name="review[body]" cols="112" rows="7" disabled ></textarea>
+                <textarea name="review[body]" disabled ></textarea>
                 <button className="body__btn disabled" disabled>LogIn</button>
             </form>}
     </>

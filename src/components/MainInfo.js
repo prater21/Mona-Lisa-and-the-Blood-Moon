@@ -61,12 +61,10 @@ const MainInfo = () => {
                 <div className="body__cast">
                     <img src={process.env.PUBLIC_URL + "/imgs/ED.png"} alt="" />
                     <p>에드 스크레인</p>
-
                 </div>
                 <div className="body__cast">
                     <img src={process.env.PUBLIC_URL + "/imgs/Evan.jpg"} alt="" />
                     <p>에반 휘튼</p>
-
                 </div>
             </div>
         </div>

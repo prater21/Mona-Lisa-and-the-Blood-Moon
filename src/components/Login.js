@@ -5,9 +5,9 @@ import { loginUrl, getTokenEndpoint, getTokenBody } from '../config/login';
 import "./Login.css"
 
 const Login = ({ setUser }) => {
-
     const [code, setCode] = useState(null);
     const [searchParams, setSearchParams] = useSearchParams();
+
     useEffect(() => {
         const param = searchParams.get("code");
         if (param) {

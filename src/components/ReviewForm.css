@@ -36,7 +36,9 @@
 textarea {
   margin-top: 5px;
   resize: none;
-  margin-left: 5px;
+  margin-left:3px;
+  width:900px ;
+  height: 100px;
 }
 
 .body__username {
