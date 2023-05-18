@@ -8,10 +8,10 @@ Simple website about the movie "Mona lisa and the Blood Moon"
 
 # Features
 
-- Add reviews
+- Add Reviews
 
 # Built with
 
 - HTML, CSS
-- Vanilla JS
-- [Firebase](https://firebase.google.com/)
+- Javascript
+- [Firebase](https://firebase.google.com/) realtime database
