@@ -5,7 +5,7 @@
 //google oAuth
 const authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
 // const redirectUri = "http://localhost:3000/MonaLisaAndTheBloodMoon/main";
-const redirectUri = "https://monalisaandthebloodmoon.netlify.app/main"
+const redirectUri = "https://mona-lisa-and-the-blood-moon.netlify.app/main"
 const clientId = process.env.REACT_APP_CLIENT_ID;
 const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
 const scopes =
