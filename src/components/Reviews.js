@@ -7,16 +7,19 @@ import "./Reviews.css"
 
 const Reviews = ({ reviews, setReviews, userInfo }) => {
 
-    const deleteReview = async(id) => {
-        await remove(ref(database, `/reviews/${id}`));
+    const deleteReview = async (id) => {
+        const confirmMsg = window.confirm("댓글을 지우시겠습니까?")
+        if (confirmMsg) {
+            await remove(ref(database, `/reviews/${id}`));
 
-        const dbRef = ref(database);
-        const snapshot = await get(child(dbRef, "/reviews"))
-        if (snapshot.exists()) {
-            setReviews(snapshot.val());
-        }
-        else {
-            setReviews(null);
+            const dbRef = ref(database);
+            const snapshot = await get(child(dbRef, "/reviews"))
+            if (snapshot.exists()) {
+                setReviews(snapshot.val());
+            }
+            else {
+                setReviews(null);
+            }
         }
     }
 

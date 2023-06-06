@@ -13,20 +13,24 @@ const ReviewForm = ({ login, userInfo, setReviews }) => {
 
     const addReview = async (e) => {
         e.preventDefault();
-        const body = review.current.value;
-        const reviewId = uuid();
-        const date = new Date().toLocaleString('en-GB');
-        await set(ref(database, "reviews/" + reviewId), {
-            stars: rating,
-            review: body,
-            useremail: userInfo.email,
-            username: userInfo.name,
-            date: date.toLocaleString()
-        });
-        const dbRef = ref(database);
-        const snapshot = await get(child(dbRef, "/reviews"))
-        setReviews(snapshot.val());
-        review.current.value = "";
+        const confirmMsg = window.confirm("댓글을 등록하시겠습니까?")
+        if (confirmMsg) {
+            const body = review.current.value;
+            const reviewId = uuid();
+            const date = new Date().toLocaleString('en-GB');
+            await set(ref(database, "reviews/" + reviewId), {
+                stars: rating,
+                review: body,
+                useremail: userInfo.email,
+                username: userInfo.name,
+                date: date.toLocaleString()
+            });
+            const dbRef = ref(database);
+            const snapshot = await get(child(dbRef, "/reviews"))
+            setReviews(snapshot.val());
+            review.current.value = "";
+        }
+
     }
 
     const getRating = (e) => {
@@ -49,7 +53,7 @@ const ReviewForm = ({ login, userInfo, setReviews }) => {
                     <input type="radio" id="1-star" name="review[rating]" value="1" onChange={getRating} />
                     <label htmlFor="1-star" className="star">&#9733;</label>
                 </div>
-                <textarea name="review[body]"  required ref={review}></textarea>
+                <textarea name="review[body]" required ref={review}></textarea>
                 <button className="body__btn">Add</button>
                 <p className="body__username">by {userInfo.name}</p>
             </form>}

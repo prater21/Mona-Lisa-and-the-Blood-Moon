@@ -6,7 +6,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/'>
       <Route index element={<Index />} />
-      <Route path='main' element={<Main />} loader={loader}/>
+      <Route path='main' element={<Main />} loader={loader} />
     </Route>
   )
 )

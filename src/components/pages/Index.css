@@ -16,7 +16,6 @@
   gap: 3px;
   z-index: 1;
   transition: all 0.4s linear;
-
 }
 
 .title p {
@@ -38,13 +37,13 @@
   font-weight: bold;
   margin-right: 30px;
 }
-.red{
-    color: rgb(151, 29, 158);
+
+.red {
+  color: rgb(151, 29, 158);
   text-shadow: 4px 4px 5px rgb(199, 102, 204);
-
   transition: all 0.3s linear;
-
 }
+
 .img-moon {
   position: fixed;
   top: -1px;
@@ -63,7 +62,6 @@
   position: fixed;
   bottom: -50px;
   width: 900px;
-  /* height: 100vh; */
 }
 
 .click-btn {
@@ -76,16 +74,17 @@
   top: 130px;
   left: 200px;
 }
-.img-diner{
+
+.img-diner {
   position: fixed;
   width: 900px;
   bottom: 35px;
 }
 
-.img-diner img{
+.img-diner img {
   height: 510px;
   transition: all 0.2s linear;
-  transform-origin: bottom left ;
+  transform-origin: bottom left;
 }
 
 .img-mona {
@@ -100,9 +99,9 @@
   margin-left: auto;
   margin-right: 68px;
   transition: all 0.5s linear;
-  transform-origin: bottom left ;
-
+  transform-origin: bottom left;
 }
+
 .img-mona img:hover {
   transform: scale(1.1);
   cursor: pointer;
