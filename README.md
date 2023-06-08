@@ -14,4 +14,4 @@ Simple website about the movie "Mona lisa and the Blood Moon"
 
 - HTML, CSS
 - Javascript
-- [Firebase](https://firebase.google.com/) realtime database
+- [Firebase Realtime Database](https://firebase.google.com/docs/database)
