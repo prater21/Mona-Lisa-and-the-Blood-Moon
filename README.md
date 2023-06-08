@@ -1,6 +1,6 @@
 # Mona Lisa and the Blood Moon
 
-Website about the movie "Mona lisa and the Blood Moon"
+Website about the movie ["Mona lisa and the Blood Moon"](https://www.imdb.com/title/tt8760670/)
 
 [>>Live Demo](https://monalisaandthebloodmoon.netlify.app/)
 
@@ -10,9 +10,11 @@ Website about the movie "Mona lisa and the Blood Moon"
 ## Built with
 
 - React
-- Firebase realtime database
+- [Firebase Realtime Database](https://firebase.google.com/docs/database)
+- [Google OAuth 2.0](https://developers.google.com/identity/protocols/oauth2)
+
 
 ## Features
 
-- Google oAuth Login
+- Google Login
 - Add, Delete Reviews
