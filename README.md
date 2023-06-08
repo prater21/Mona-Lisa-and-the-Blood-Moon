@@ -8,12 +8,11 @@ Simple website about the movie "Mona lisa and the Blood Moon"
 
 # Features
 
-- Google oAuth Login
+- Google Login
 - Add, Delete Reviews
 
 # Built with
 
-- express
-- ejs
-- Javascript
-- [Firebase](https://firebase.google.com/) realtime database
+- [express](https://expressjs.com/)
+- [ejs](https://ejs.co/)
+- [Firebase Realtime Database](https://firebase.google.com/docs/database)
