@@ -2,7 +2,7 @@
 
 Website about the movie ["Mona lisa and the Blood Moon"](https://www.imdb.com/title/tt8760670/)
 
-[>>Live Demo](https://monalisaandthebloodmoon.netlify.app/)
+[>>Live Demo](https://mona-lisa-and-the-blood-moon.netlify.app/)
 
 <img width="50%" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/374b745b-329b-4c4e-bcf9-5357f32933ee" /> 
 
