@@ -5,7 +5,11 @@ Simple website about the movie "Mona lisa and the Blood Moon"
 [>>Go To the Website](https://mona-lisa-and-the-blood-moon.onrender.com/MonaLisaAndTheBloodMoon)
 ###### * take some time to wake up the server
 
-<img width="500" height="300" alt="image (1)" src="https://user-images.githubusercontent.com/126800695/230681177-e2896c45-66d5-48e4-a7aa-6a825f63d3e2.png"> <img width="500"  height="300" alt="image (4)" src="https://user-images.githubusercontent.com/126800695/230681772-babffae0-9496-418a-925c-10330bd26e0a.png">
+<img width="55%" alt="image (8)" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/fb96dbf1-c8c7-4427-826d-8ace105b821f">
+
+<img width="45%" height="330" alt="image (9)" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/218c3805-ddb6-4df5-b67f-a3849f2c05a1">
+<img width="45%" height="330" alt="image (10)" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/f38d4ced-7a3a-43c3-aba4-53fc79497179">
+
 
 # Features
 
