@@ -7,8 +7,7 @@ Simple website about the movie "Mona lisa and the Blood Moon"
 
 <img width="55%" alt="image (8)" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/fb96dbf1-c8c7-4427-826d-8ace105b821f">
 
-<img width="45%" height="330" alt="image (9)" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/218c3805-ddb6-4df5-b67f-a3849f2c05a1">
-<img width="45%" height="330" alt="image (10)" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/f38d4ced-7a3a-43c3-aba4-53fc79497179">
+<img width="55%" alt="image (9)" src="https://github.com/prater21/Mona-Lisa-and-the-Blood-Moon/assets/126800695/218c3805-ddb6-4df5-b67f-a3849f2c05a1">
 
 
 # Features
